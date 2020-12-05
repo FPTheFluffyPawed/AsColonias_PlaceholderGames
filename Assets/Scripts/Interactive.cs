@@ -15,9 +15,9 @@ public class Interactive : MonoBehaviour
     private void Start()
     {
         timer = 0f;
-        //highlighted = new Color(0.2f, 0.2f, 0.2f);
-        //notHighlighted = new Color(0, 0, 0);
-        //m = GetComponent<Renderer>().material;
+        highlighted = new Color(0.2f, 0.2f, 0.2f);
+        notHighlighted = new Color(0, 0, 0);
+        m = GetComponent<Renderer>().material;
     }
 
     private void FixedUpdate()

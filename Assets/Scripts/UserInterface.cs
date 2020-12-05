@@ -5,5 +5,8 @@ using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour
 {
-    public Image Crosshair { get; private set; }
+    public void InteractionText(string interactionName)
+    {
+
+    }
 }
