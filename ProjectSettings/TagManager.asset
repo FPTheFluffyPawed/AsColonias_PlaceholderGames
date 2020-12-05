@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Interact_Examine
+  - Interact_Talk
+  - Interact_Pick
   layers:
   - Default
   - TransparentFX
