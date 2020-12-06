@@ -20,13 +20,21 @@ public class PlayerInteraction : MonoBehaviour
     private void FixedUpdate()
     {
         CheckForInteractive();
+        CheckForInteraction();
         Hovering();
     }
 
     private void Hovering()
     {
         if (_currentInteractive != null)
+        {
             _currentInteractive.Highlight();
+            _ui.SetInteractionText(_currentInteractive.interactiveText);
+        }
+        else
+        {
+            _ui.ClearInteractionText();
+        }
     }
 
     /// <summary>
@@ -50,6 +58,20 @@ public class PlayerInteraction : MonoBehaviour
             ClearCurrentInteractive();
     }
 
+    private void CheckForInteraction()
+    {
+        if(_currentInteractive != null)
+        {
+            switch(_currentInteractive.type)
+            {
+                case Interactive.InteractType.Examine:
+                    if (Input.GetMouseButtonDown(0))
+                        Examine();
+                    break;
+            }
+        }
+    }
+
     private void SetCurrentInteractive(Interactive newInteractive)
     {
         _currentInteractive = newInteractive;
@@ -68,6 +90,11 @@ public class PlayerInteraction : MonoBehaviour
     private void Talk()
     {
 
+    }
+
+    private void Examine()
+    {
+        _ui.
     }
 
     private void Interact()

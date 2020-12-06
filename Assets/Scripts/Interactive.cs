@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Interactive : MonoBehaviour
 {
+    [Tooltip("This is what will appear when the Player hovers over it.")]
+    public string interactiveText;
     public enum InteractType { Examine, Talk, Pickup };
 
     public InteractType type;
