@@ -9,19 +9,25 @@ public class PlayerInteraction : MonoBehaviour
     private Camera _cam;
     private UserInterface _ui;
     private Interactive _currentInteractive;
+    private AudioSource _audioSource;
+    private float interactionCooldown;
 
     private void Start()
     {
         _cam = GetComponentInChildren<Camera>();
         _ui = GetComponentInChildren<UserInterface>();
         _currentInteractive = null;
+        _audioSource = GetComponent<AudioSource>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        CheckForInteractive();
-        CheckForInteraction();
-        Hovering();
+        if(CanInteractAgain())
+        {
+            CheckForInteractive();
+            CheckForInteraction();
+            Hovering();
+        }
     }
 
     private void Hovering()
@@ -29,7 +35,9 @@ public class PlayerInteraction : MonoBehaviour
         if (_currentInteractive != null)
         {
             _currentInteractive.Highlight();
-            _ui.SetInteractionText(_currentInteractive.interactiveText);
+
+            if(CanInteractAgain())
+                _ui.SetInteractionText(_currentInteractive.interactiveText);
         }
         else
         {
@@ -94,11 +102,35 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Examine()
     {
-        _ui.
+        // Set the clip of the interactive.
+        _audioSource.clip = _currentInteractive.audioClip;
+
+        // Play the sound.
+        _audioSource.Play();
+
+        // Set the interaction cooldown to the length of the clip.
+        interactionCooldown = _audioSource.clip.length;
+
+        // Clear the text.
+        _ui.ClearInteractionText();
     }
 
     private void Interact()
     {
         _currentInteractive.Interact();
+    }
+
+    private bool CanInteractAgain()
+    {
+        Debug.Log(interactionCooldown);
+
+        interactionCooldown -= Time.deltaTime;
+
+        if (interactionCooldown < 0) interactionCooldown = 0;
+
+        if (interactionCooldown <= 0)
+            return true;
+        else
+            return false;
     }
 }

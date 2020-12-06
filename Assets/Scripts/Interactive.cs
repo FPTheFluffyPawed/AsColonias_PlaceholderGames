@@ -6,6 +6,9 @@ public class Interactive : MonoBehaviour
 {
     [Tooltip("This is what will appear when the Player hovers over it.")]
     public string interactiveText;
+    [Tooltip("The audio file to play when the object is examined.")]
+    public AudioClip audioClip;
+
     public enum InteractType { Examine, Talk, Pickup };
 
     public InteractType type;

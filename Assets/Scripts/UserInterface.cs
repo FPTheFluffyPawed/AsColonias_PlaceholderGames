@@ -17,4 +17,9 @@ public class UserInterface : MonoBehaviour
     {
         popUpText.text = null;
     }
+
+    public void Subtitles(string subtitles)
+    {
+
+    }
 }
