@@ -125,7 +125,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool CanInteractAgain()
     {
-        Debug.Log(interactionCooldown);
+        //Debug.Log(interactionCooldown);
 
         interactionCooldown -= Time.deltaTime;
 
