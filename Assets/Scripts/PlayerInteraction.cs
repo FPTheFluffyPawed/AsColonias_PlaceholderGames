@@ -108,6 +108,9 @@ public class PlayerInteraction : MonoBehaviour
         // Play the sound.
         _audioSource.Play();
 
+        // Get the subtitles from the corresponding interactive.
+        _ui.DisplaySubtitles(_currentInteractive.subtitles);
+
         // Set the interaction cooldown to the length of the clip.
         interactionCooldown = _audioSource.clip.length;
 

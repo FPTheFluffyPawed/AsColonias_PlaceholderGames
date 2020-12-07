@@ -8,6 +8,8 @@ public class Interactive : MonoBehaviour
     public string interactiveText;
     [Tooltip("The audio file to play when the object is examined.")]
     public AudioClip audioClip;
+    [Tooltip("The subtitles that are part of this audio file.")]
+    public TextAsset subtitles;
 
     public enum InteractType { Examine, Talk, Pickup };
 

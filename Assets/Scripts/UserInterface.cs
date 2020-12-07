@@ -7,6 +7,12 @@ using TMPro;
 public class UserInterface : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI popUpText, interactionText, subtitlesText;
+    private SubtitleDisplayer _subtitleDisplayer;
+
+    private void Start()
+    {
+        _subtitleDisplayer = GetComponent<SubtitleDisplayer>();
+    }
 
     public void SetInteractionText(string interactionName)
     {
@@ -18,8 +24,12 @@ public class UserInterface : MonoBehaviour
         popUpText.text = null;
     }
 
-    public void Subtitles(string subtitles)
+    public void DisplaySubtitles(TextAsset subtitles)
     {
+        // Add the subtitle text to the displayer.
+        _subtitleDisplayer.Subtitle = subtitles;
 
+        // Begin the subtitles.
+        StartCoroutine(_subtitleDisplayer.Begin());
     }
 }
