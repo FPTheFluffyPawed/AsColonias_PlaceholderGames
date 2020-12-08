@@ -72,6 +72,10 @@ public class PlayerInteraction : MonoBehaviour
         {
             switch(_currentInteractive.type)
             {
+                case Interactive.InteractType.Talk:
+                    if (Input.GetMouseButtonDown(0))
+                        Talk();
+                    break;
                 case Interactive.InteractType.Examine:
                     if (Input.GetMouseButtonDown(0))
                         Examine();
@@ -97,7 +101,8 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Talk()
     {
-
+        // Call the coroutine and wait for it to end.
+        _ui.Talk(_currentInteractive.dialog, _audioSource);
     }
 
     private void Examine()
@@ -125,7 +130,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool CanInteractAgain()
     {
-        Debug.Log(interactionCooldown);
+        //Debug.Log(interactionCooldown);
 
         interactionCooldown -= Time.deltaTime;
 
