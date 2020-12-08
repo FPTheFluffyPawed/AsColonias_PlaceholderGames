@@ -12,6 +12,8 @@ public class Interactive : MonoBehaviour
     public TextAsset subtitles;
     [Tooltip("The dialog to be used for the conversation.")]
     public Dialog dialog;
+    [Tooltip("The sprite when in an inventory.")]
+    public Sprite sprite;
 
     public enum InteractType { Examine, Talk, Pickup };
 
