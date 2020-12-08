@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UserInterface : MonoBehaviour
+public class PlayerInterface : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI popUpText, dialogText, dialogContinueText;
+    [SerializeField] private GameObject _inventoryPanel;
+    [SerializeField] private Image[] inventorySlots;
 
     private SubtitleDisplayer _subtitleDisplayer;
     private PlayerMovement _pm;
@@ -19,6 +21,31 @@ public class UserInterface : MonoBehaviour
         _pm = GetComponentInParent<PlayerMovement>();
         _pr = GetComponentInParent<PlayerRotation>();
         _pi = GetComponentInParent<PlayerInteraction>();
+    }
+
+    private void Update()
+    {
+        OpenInventory();
+    }
+
+    private void UpdateSlots()
+    {
+        CleanInventorySlots();
+
+        for(int i = 0; i < _pi.inventory.Count; i++)
+        {
+            inventorySlots[i].sprite = _pi.inventory[i].sprite;
+            inventorySlots[i].gameObject.SetActive(true);
+        }
+    }
+
+    private void CleanInventorySlots()
+    {
+        foreach(Image i in inventorySlots)
+        {
+            i.sprite = null;
+            i.gameObject.SetActive(false);
+        }
     }
 
     public void SetInteractionText(string interactionName)
@@ -87,6 +114,25 @@ public class UserInterface : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    private void OpenInventory()
+    {
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            _inventoryPanel.SetActive(true);
+            UpdateSlots();
+        }
+        else
+            _inventoryPanel.SetActive(false);
+    }
+
+    private bool HasUIOpen()
+    {
+        if (_inventoryPanel.activeSelf)
+            return true;
+        else
+            return false;
     }
 
     private void DisablePlayer()
