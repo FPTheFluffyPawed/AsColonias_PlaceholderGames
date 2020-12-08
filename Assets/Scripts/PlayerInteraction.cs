@@ -101,7 +101,8 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Talk()
     {
-
+        // Call the coroutine and wait for it to end.
+        _ui.Talk(_currentInteractive.dialog, _audioSource);
     }
 
     private void Examine()
