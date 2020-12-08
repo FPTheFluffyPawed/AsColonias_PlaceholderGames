@@ -241,7 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpText: {fileID: 970644930}
-  interactionText: {fileID: 1946569128}
   subtitlesText: {fileID: 2024909608}
 --- !u!114 &64456281
 MonoBehaviour:
@@ -314,6 +313,7 @@ MonoBehaviour:
   interactiveText: Talk
   audioClip: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
   subtitles: {fileID: 4900000, guid: 5f1b986620f185445b64cd1a2b7d4f8d, type: 3}
+  dialog: {fileID: 0}
   type: 1
 --- !u!135 &144354094
 SphereCollider:
@@ -491,7 +491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &301279565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1333,6 +1333,7 @@ MonoBehaviour:
   interactiveText: Pickup
   audioClip: {fileID: 0}
   subtitles: {fileID: 0}
+  dialog: {fileID: 0}
   type: 2
 --- !u!135 &1316576946
 SphereCollider:
@@ -1913,6 +1914,7 @@ MonoBehaviour:
   interactiveText: Inspect
   audioClip: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
   subtitles: {fileID: 4900000, guid: 5f1b986620f185445b64cd1a2b7d4f8d, type: 3}
+  dialog: {fileID: 0}
   type: 0
 --- !u!95 &2017576854
 Animator:

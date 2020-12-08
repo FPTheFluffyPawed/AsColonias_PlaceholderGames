@@ -10,6 +10,8 @@ public class Interactive : MonoBehaviour
     public AudioClip audioClip;
     [Tooltip("The subtitles that are part of this audio file.")]
     public TextAsset subtitles;
+    [Tooltip("The dialog to be used for the conversation.")]
+    public Dialog dialog;
 
     public enum InteractType { Examine, Talk, Pickup };
 

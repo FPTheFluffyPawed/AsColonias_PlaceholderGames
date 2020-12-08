@@ -72,6 +72,10 @@ public class PlayerInteraction : MonoBehaviour
         {
             switch(_currentInteractive.type)
             {
+                case Interactive.InteractType.Talk:
+                    if (Input.GetMouseButtonDown(0))
+                        Talk();
+                    break;
                 case Interactive.InteractType.Examine:
                     if (Input.GetMouseButtonDown(0))
                         Examine();

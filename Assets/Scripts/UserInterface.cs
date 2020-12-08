@@ -6,7 +6,7 @@ using TMPro;
 
 public class UserInterface : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI popUpText, interactionText, subtitlesText;
+    [SerializeField] private TextMeshProUGUI popUpText, subtitlesText;
     private SubtitleDisplayer _subtitleDisplayer;
 
     private void Start()
