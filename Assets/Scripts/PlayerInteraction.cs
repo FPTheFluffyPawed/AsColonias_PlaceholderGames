@@ -87,6 +87,10 @@ public class PlayerInteraction : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                         Examine();
                     break;
+                default:
+                    if (Input.GetMouseButton(0))
+                        Interact();
+                    break;
             }
         }
     }
