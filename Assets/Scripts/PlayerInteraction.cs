@@ -6,16 +6,19 @@ public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] float interactionDistance = 2.0f;
 
+    public List<Interactive> inventory;
+
     private Camera _cam;
-    private UserInterface _ui;
+    private PlayerInterface _ui;
     private Interactive _currentInteractive;
     private AudioSource _audioSource;
     private float interactionCooldown;
 
     private void Start()
     {
+        inventory = new List<Interactive>();
         _cam = GetComponentInChildren<Camera>();
-        _ui = GetComponentInChildren<UserInterface>();
+        _ui = GetComponentInChildren<PlayerInterface>();
         _currentInteractive = null;
         _audioSource = GetComponent<AudioSource>();
     }
@@ -72,9 +75,21 @@ public class PlayerInteraction : MonoBehaviour
         {
             switch(_currentInteractive.type)
             {
+                case Interactive.InteractType.Pickup:
+                    if (Input.GetMouseButtonDown(0))
+                        Pickup();
+                    break;
+                case Interactive.InteractType.Talk:
+                    if (Input.GetMouseButtonDown(0))
+                        Talk();
+                    break;
                 case Interactive.InteractType.Examine:
                     if (Input.GetMouseButtonDown(0))
                         Examine();
+                    break;
+                default:
+                    if (Input.GetMouseButton(0))
+                        Interact();
                     break;
             }
         }
@@ -92,12 +107,14 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Pickup()
     {
-
+        AddToInventory(_currentInteractive);
+        _currentInteractive.gameObject.SetActive(false);
     }
 
     private void Talk()
     {
-
+        // Call the coroutine and wait for it to end.
+        _ui.Talk(_currentInteractive.dialog, _audioSource);
     }
 
     private void Examine()
@@ -125,7 +142,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool CanInteractAgain()
     {
-        Debug.Log(interactionCooldown);
+        //Debug.Log(interactionCooldown);
 
         interactionCooldown -= Time.deltaTime;
 
@@ -136,4 +153,16 @@ public class PlayerInteraction : MonoBehaviour
         else
             return false;
     }
+
+    private void AddToInventory(Interactive item)
+    {
+        inventory.Add(item);
+    }
+
+    private void RemoveFromInventory(Interactive item)
+    {
+        inventory.Remove(item);
+    }
+
+    private bool HasInInventory(Interactive item) => inventory.Contains(item);
 }
