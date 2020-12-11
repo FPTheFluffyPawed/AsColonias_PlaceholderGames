@@ -29,21 +29,26 @@ public class Interactive : MonoBehaviour
         timer = 0f;
         highlighted = new Color(0.2f, 0.2f, 0.2f);
         notHighlighted = new Color(0, 0, 0);
-        m = GetComponent<Renderer>().material;
+
+        if(GetComponent<Renderer>() != null)
+            m = GetComponent<Renderer>().material;
+
         _animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
         timer -= Time.deltaTime;
-        if (timer < 0)
+        if (timer < 0 && m != null)
             m.SetColor("_EmissionColor", notHighlighted);
     }
 
     public void Highlight()
     {
         timer = 0.1f;
-        m.SetColor("_EmissionColor", highlighted);
+
+        if(m != null)
+            m.SetColor("_EmissionColor", highlighted);
     }
 
     public void Interact()

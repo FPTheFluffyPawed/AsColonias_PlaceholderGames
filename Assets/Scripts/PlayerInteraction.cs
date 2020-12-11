@@ -21,6 +21,9 @@ public class PlayerInteraction : MonoBehaviour
         _ui = GetComponentInChildren<PlayerInterface>();
         _currentInteractive = null;
         _audioSource = GetComponent<AudioSource>();
+
+        Cursor.visible = false;
+        Screen.SetResolution(1920, 1080, true);
     }
 
     private void Update()
@@ -138,6 +141,8 @@ public class PlayerInteraction : MonoBehaviour
     private void Interact()
     {
         _currentInteractive.Interact();
+
+        interactionCooldown = 0.2f;
     }
 
     private bool CanInteractAgain()
