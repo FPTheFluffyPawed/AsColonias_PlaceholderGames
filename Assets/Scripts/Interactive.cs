@@ -24,7 +24,8 @@ public class Interactive : MonoBehaviour
     private float timer;
     private Color highlighted, notHighlighted;
     private Material m;
-    private Animator _animator;
+    
+    [SerializeField] private Animator _animator;
 
     private void Start()
     {
@@ -35,7 +36,8 @@ public class Interactive : MonoBehaviour
         if(GetComponent<Renderer>() != null)
             m = GetComponent<Renderer>().material;
 
-        _animator = GetComponent<Animator>();
+        if(_animator == null)
+            _animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
