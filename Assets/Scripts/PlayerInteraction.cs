@@ -24,6 +24,7 @@ public class PlayerInteraction : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
 
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         Screen.SetResolution(1920, 1080, true);
     }
 
