@@ -14,15 +14,18 @@ public class Interactive : MonoBehaviour
     public Dialog dialog;
     [Tooltip("The sprite when in an inventory.")]
     public Sprite sprite;
+    [Tooltip("The requirements needed to interact with this.")]
+    public Interactive[] inventoryRequirements;
 
-    public enum InteractType { Examine, Talk, Pickup, Interact };
+    public enum InteractType { Examine, Talk, Pickup, Interact, Lock };
 
     public InteractType type;
 
     private float timer;
     private Color highlighted, notHighlighted;
     private Material m;
-    private Animator _animator;
+    
+    [SerializeField] private Animator _animator;
 
     private void Start()
     {
@@ -33,7 +36,8 @@ public class Interactive : MonoBehaviour
         if(GetComponent<Renderer>() != null)
             m = GetComponent<Renderer>().material;
 
-        _animator = GetComponent<Animator>();
+        if(_animator == null)
+            _animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -55,5 +59,8 @@ public class Interactive : MonoBehaviour
     {
         if (_animator != null)
             _animator.SetTrigger("Interact");
+
+        if (type == InteractType.Lock)
+            GetComponent<Collider>().enabled = false;
     }
 }
