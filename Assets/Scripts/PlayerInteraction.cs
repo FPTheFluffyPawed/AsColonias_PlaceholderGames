@@ -13,6 +13,7 @@ public class PlayerInteraction : MonoBehaviour
     private Interactive _currentInteractive;
     private AudioSource _audioSource;
     private float interactionCooldown;
+    private bool _hasRequirements;
 
     private void Start()
     {
@@ -101,6 +102,15 @@ public class PlayerInteraction : MonoBehaviour
     private void SetCurrentInteractive(Interactive newInteractive)
     {
         _currentInteractive = newInteractive;
+
+        if (HasInteractionRequirements())
+        {
+            _hasRequirements = true;
+        }
+        else
+        {
+            _hasRequirements = false;
+        }
     }
 
     private void ClearCurrentInteractive()
@@ -118,6 +128,8 @@ public class PlayerInteraction : MonoBehaviour
     {
         // Call the coroutine and wait for it to end.
         _ui.Talk(_currentInteractive.dialog, _audioSource);
+        interactionCooldown = 1.0f;
+        _ui.ClearInteractionText();
     }
 
     private void Examine()
@@ -140,9 +152,31 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Interact()
     {
-        _currentInteractive.Interact();
+        if (_hasRequirements)
+        {
+            for (int i = 0; i < _currentInteractive.inventoryRequirements.Length; i++)
+                RemoveFromInventory(_currentInteractive.inventoryRequirements[i]);
 
-        interactionCooldown = 0.2f;
+            _currentInteractive.Interact();
+
+            interactionCooldown = 0.2f;
+        }
+        else
+        {
+            Examine();
+        }
+    }
+
+    private bool HasInteractionRequirements()
+    {
+        if (_currentInteractive.inventoryRequirements == null)
+            return true;
+
+        for (int i = 0; i < _currentInteractive.inventoryRequirements.Length; ++i)
+            if (!HasInInventory(_currentInteractive.inventoryRequirements[i]))
+                return false;
+
+        return true;
     }
 
     private bool CanInteractAgain()

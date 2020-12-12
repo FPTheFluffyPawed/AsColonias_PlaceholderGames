@@ -14,8 +14,10 @@ public class Interactive : MonoBehaviour
     public Dialog dialog;
     [Tooltip("The sprite when in an inventory.")]
     public Sprite sprite;
+    [Tooltip("The requirements needed to interact with this.")]
+    public Interactive[] inventoryRequirements;
 
-    public enum InteractType { Examine, Talk, Pickup, Interact };
+    public enum InteractType { Examine, Talk, Pickup, Interact, Lock };
 
     public InteractType type;
 
@@ -55,5 +57,8 @@ public class Interactive : MonoBehaviour
     {
         if (_animator != null)
             _animator.SetTrigger("Interact");
+
+        if (type == InteractType.Lock)
+            GetComponent<Collider>().enabled = false;
     }
 }
