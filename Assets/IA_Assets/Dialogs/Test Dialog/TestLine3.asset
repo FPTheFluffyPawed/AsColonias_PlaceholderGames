@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TestLine3
   m_EditorClassIdentifier: 
   dialogSound: {fileID: 8300000, guid: 77dd6cd0315db024ca90e60a7ad3e0c5, type: 3}
-  dialogSubtitles: OK, see you then!
+  dialogSubtitles: <color=yellow>OK, see you then!</color>
