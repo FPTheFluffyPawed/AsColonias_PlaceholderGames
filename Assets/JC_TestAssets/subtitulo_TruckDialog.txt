@@ -15,5 +15,13 @@
 <color=yellow>By God's will, sergeant, by God's will...</color>
 
 5
+00:00:28 --> 00:00:29
+[Gunshots.]
+
+6
 00:00:29 --> 00:00:31
 <color=red>It's an ambush!</color>
+
+7
+00:00:31 --> 00:00:35
+[Gunshots escalating in rate.]

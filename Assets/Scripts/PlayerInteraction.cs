@@ -7,12 +7,12 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] float interactionDistance = 2.0f;
 
     public List<Interactive> inventory;
+    public float interactionCooldown;
 
     private Camera _cam;
     private PlayerInterface _ui;
     private Interactive _currentInteractive;
     private AudioSource _audioSource;
-    private float interactionCooldown;
     private bool _hasRequirements;
 
     private void Start()
@@ -145,7 +145,7 @@ public class PlayerInteraction : MonoBehaviour
         _ui.DisplaySubtitles(_currentInteractive.subtitles);
 
         // Set the interaction cooldown to the length of the clip.
-        interactionCooldown = _audioSource.clip.length;
+        interactionCooldown = _audioSource.clip.length + 0.5f;
 
         // Clear the text.
         _ui.ClearInteractionText();

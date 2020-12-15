@@ -1,0 +1,15 @@
+1
+00:00:01 --> 00:00:03
+Welcome to the demonstration of <b>"As Colonias"</b>.
+
+2
+00:00:03,800 --> 00:00:08
+Infront of you there is a small area where we demonstrate some of the main mechanics of our game.
+
+3
+00:00:08,500 --> 00:00:12
+The demonstration also includes an example of how one of our cutscenes will play out.
+
+4
+00:00:13 --> 00:00:17
+The main objective is to enter the <b>back of the truck</b>.
