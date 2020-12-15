@@ -1,0 +1,27 @@
+1
+00:00:02,800 --> 00:00:07
+<color=green>So, Corporal Sampaio, any news from the city about your brother?</color>
+
+2
+00:00:07,500 --> 00:00:13
+<color=yellow>Still nothing, my sergeant... Haven't received news about my family for almost three weeks.</color>
+
+3
+00:00:13,100 --> 00:00:19,800
+<color=green>Cheer up, your brother should be better. Today, this afternoon, we will receive a few aerograms, there ought to be something for you there.</color>
+
+4
+00:00:20 --> 00:00:24
+<color=yellow>By God's will, sergeant, by God's will...</color>
+
+5
+00:00:28 --> 00:00:29
+[Gunshots.]
+
+6
+00:00:29 --> 00:00:31
+<color=red>It's an ambush!</color>
+
+7
+00:00:31 --> 00:00:35
+[Gunshots escalating in rate.]

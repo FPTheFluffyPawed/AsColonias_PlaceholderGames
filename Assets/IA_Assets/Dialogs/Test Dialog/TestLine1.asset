@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TestLine1
   m_EditorClassIdentifier: 
   dialogSound: {fileID: 8300000, guid: fe9a18610e794c546a8259a5ee33e0d0, type: 3}
-  dialogSubtitles: Hey, all good?
+  dialogSubtitles: <color=yellow>Hey, all good?</color>
