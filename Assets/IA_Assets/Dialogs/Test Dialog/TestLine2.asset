@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: TestLine2
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: a3b459f15e9688e45945ef9c6333c649, type: 3}
+  dialogSound: {fileID: 8300000, guid: 1fcb2ffe25c6caf47a2bc07e588d49c9, type: 3}
   dialogSubtitles: All fine with me.
