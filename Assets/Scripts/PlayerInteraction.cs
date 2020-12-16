@@ -122,7 +122,7 @@ public class PlayerInteraction : MonoBehaviour
     private void Pickup()
     {
         AddToInventory(_currentInteractive);
-        _currentInteractive.gameObject.SetActive(false);
+        _currentInteractive.transform.parent.gameObject.SetActive(false);
     }
 
     private void Talk()
