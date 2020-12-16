@@ -1,6 +1,6 @@
 1
 00:00:01 --> 00:00:03
-Welcome to the demonstration of <b>"As Colonias"</b>.
+Welcome to the demonstration of  <b>"As Colonias"</b>.
 
 2
 00:00:03,800 --> 00:00:08
