@@ -92,7 +92,7 @@ public class PlayerInterface : MonoBehaviour
             dialogContinueText.gameObject.SetActive(true);
 
             // Continue after key press.
-            yield return WaitForKeyPress(KeyCode.Mouse1);
+            yield return WaitForKeyPress(KeyCode.Mouse0);
 
             // Hide the prompt again.
             dialogContinueText.gameObject.SetActive(false);
