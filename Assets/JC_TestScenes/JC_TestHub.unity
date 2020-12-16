@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a5701dc4bb3f64084e88879e2c70b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactiveText: Inspect Docuements
+  interactiveText: Inspect Documents
   audioClip: {fileID: 8300000, guid: ee908e99269a7814984cf7602bae5b79, type: 3}
   subtitles: {fileID: 4900000, guid: 85f32865cf5d8bb4a9e60b554c06ccf4, type: 3}
   dialog: {fileID: 0}
