@@ -6,14 +6,7 @@ using TMPro;
 
 public class LoadLevel : MonoBehaviour
 {
-    private Animator _animator;
-
     [SerializeField] private TextMeshProUGUI _continueText;
-
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
 
     private void OnEnable()
     {
@@ -31,9 +24,9 @@ public class LoadLevel : MonoBehaviour
         {
             if(asyncOperation.progress >= 0.9f)
             {
-                _continueText.gameObject.SetActive(true);
-
                 Debug.Log("Finished loading");
+
+                _continueText.gameObject.SetActive(true);
 
                 if (Input.GetKeyDown(KeyCode.Space))
                     asyncOperation.allowSceneActivation = true;
