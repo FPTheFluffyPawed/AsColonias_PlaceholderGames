@@ -7,7 +7,7 @@ using TMPro;
 public class PlayerInterface : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI popUpText, dialogText, dialogContinueText;
-    [SerializeField] private GameObject _inventoryPanel;
+    [SerializeField] private GameObject _inventoryPanel, _loadPanel;
     [SerializeField] private Image[] inventorySlots;
 
     private SubtitleDisplayer _subtitleDisplayer;
@@ -26,6 +26,10 @@ public class PlayerInterface : MonoBehaviour
     private void Update()
     {
         OpenInventory();
+        
+        if(_loadPanel != null)
+            if (_loadPanel.activeSelf)
+                DisablePlayer();
     }
 
     private void UpdateSlots()
