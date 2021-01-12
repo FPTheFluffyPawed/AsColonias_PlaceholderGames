@@ -26,9 +26,10 @@ public class PlayerInterface : MonoBehaviour
     private void Update()
     {
         OpenInventory();
-
-        if (_loadPanel.activeSelf)
-            DisablePlayer();
+        
+        if(_loadPanel != null)
+            if (_loadPanel.activeSelf)
+                DisablePlayer();
     }
 
     private void UpdateSlots()
