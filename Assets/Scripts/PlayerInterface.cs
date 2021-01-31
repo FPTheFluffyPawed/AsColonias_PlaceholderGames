@@ -36,6 +36,8 @@ public class PlayerInterface : MonoBehaviour
     {
         CleanInventorySlots();
 
+        Debug.Log(_pi.inventory.Count);
+
         for(int i = 0; i < _pi.inventory.Count; i++)
         {
             inventorySlots[i].sprite = _pi.inventory[i].sprite;
