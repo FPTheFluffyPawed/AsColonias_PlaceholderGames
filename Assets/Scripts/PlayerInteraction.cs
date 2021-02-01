@@ -129,6 +129,11 @@ public class PlayerInteraction : MonoBehaviour
     {
         // Call the coroutine and wait for it to end.
         _ui.Talk(_currentInteractive.dialog, _audioSource);
+        _currentInteractive.EnableDisableGOs();
+
+        if (_currentInteractive.newObjectiveText != null)
+            _ui.UpdateObjectiveText(_currentInteractive.newObjectiveText);
+
         interactionCooldown = 1.0f;
         _ui.ClearInteractionText();
     }

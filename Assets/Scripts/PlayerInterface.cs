@@ -9,6 +9,7 @@ public class PlayerInterface : MonoBehaviour
     [SerializeField] private TextMeshProUGUI popUpText, dialogText, dialogContinueText;
     [SerializeField] private GameObject _inventoryPanel, _loadPanel;
     [SerializeField] private Image[] inventorySlots;
+    [SerializeField] private TextMeshProUGUI objectiveText;
 
     private SubtitleDisplayer _subtitleDisplayer;
     private PlayerMovement _pm;
@@ -155,5 +156,15 @@ public class PlayerInterface : MonoBehaviour
         _pm.enabled = true;
         _pr.enabled = true;
         _pi.enabled = true;
+    }
+
+    public void UpdateObjectiveText(string newObjectiveText)
+    {
+        objectiveText.text = newObjectiveText;
+    }
+
+    public void ClearObjectiveText()
+    {
+        objectiveText.text = null;
     }
 }
