@@ -20,9 +20,11 @@ public class Interactive : MonoBehaviour
     public Interactive[] inventoryRequirements;
     [Tooltip("The new objective to give to the player.")]
     public string newObjectiveText;
+    [Tooltip("The item to give to a player, if needed.")]
+    public Interactive talkGiveItem;
     [Tooltip("The animator attached, if you want an animation to play.")]
     [SerializeField] private Animator _animator;
-    public enum InteractType { Examine, Talk, Pickup, Interact, Lock };
+    public enum InteractType { Examine, Talk, Pickup, Interact, Lock, Examine_Once };
 
     public InteractType type;
 

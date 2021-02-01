@@ -92,6 +92,10 @@ public class PlayerInteraction : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                         Examine();
                     break;
+                case Interactive.InteractType.Examine_Once:
+                    if (Input.GetMouseButtonDown(0))
+                        Examine();
+                    break;
                 default:
                     if (Input.GetMouseButton(0))
                         Interact();
@@ -127,19 +131,40 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Talk()
     {
-        // Call the coroutine and wait for it to end.
-        _ui.Talk(_currentInteractive.dialog, _audioSource);
-        _currentInteractive.EnableDisableGOs();
+        if(_hasRequirements)
+        {
+            // Call the coroutine and wait for it to end.
+            _ui.Talk(_currentInteractive.dialog, _audioSource);
 
-        if (_currentInteractive.newObjectiveText != null)
-            _ui.UpdateObjectiveText(_currentInteractive.newObjectiveText);
+            // Disable/enable anything that has to be disabled/enabled.
+            _currentInteractive.EnableDisableGOs();
 
-        interactionCooldown = 1.0f;
-        _ui.ClearInteractionText();
+            // Update the objective text, if there is any to update.
+            if (_currentInteractive.newObjectiveText != null)
+                _ui.UpdateObjectiveText(_currentInteractive.newObjectiveText);
+
+            // Remove the player's item, if there was a requirement.
+            for (int i = 0; i < _currentInteractive.inventoryRequirements.Length; i++)
+                RemoveFromInventory(_currentInteractive.inventoryRequirements[i]);
+
+            // Give the player an item, if needed.
+            if (_currentInteractive.talkGiveItem != null)
+                inventory.Add(_currentInteractive.talkGiveItem);
+
+            interactionCooldown = 1.0f;
+            _ui.ClearInteractionText();
+        }
     }
 
     private void Examine()
     {
+        // Play the animation if it has one.
+        _currentInteractive.Interact();
+
+        // Check if we can only examine it once.
+        if (_currentInteractive.type == Interactive.InteractType.Examine_Once)
+            _currentInteractive.gameObject.SetActive(false);
+
         // Set the clip of the interactive.
         _audioSource.clip = _currentInteractive.audioClip;
 
