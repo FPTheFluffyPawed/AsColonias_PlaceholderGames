@@ -67,6 +67,8 @@ public class Interactive : MonoBehaviour
         if (_animator != null)
             _animator.SetTrigger("Interact");
 
+        EnableDisableGOs();
+
         if (type == InteractType.Lock)
             GetComponent<Collider>().enabled = false;
     }
