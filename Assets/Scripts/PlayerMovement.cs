@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float playerSpeed = 1.0f;
+    [SerializeField] private float playerSpeed = 6.0f;
     [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private float sprintSpeed = 12.0f;
 
     private CharacterController controller;
     private Camera cam;
     private float playerVelocity;
+    private float oldSpeed;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         cam = GetComponentInChildren<Camera>();
+        oldSpeed = playerSpeed;
     }
 
     private void Update()
@@ -37,6 +40,16 @@ public class PlayerMovement : MonoBehaviour
         {
             playerVelocity -= gravity * Time.deltaTime;
             controller.Move(new Vector3(0, playerVelocity, 0));
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            playerSpeed = sprintSpeed;
+
+        }
+        else
+        {
+            playerSpeed = oldSpeed;
         }
     }
 }
