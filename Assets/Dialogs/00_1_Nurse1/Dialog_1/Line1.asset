@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line1
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+  dialogSound: {fileID: 8300000, guid: b9704883f9946e946af12ab2c41332ab, type: 3}
   dialogSubtitles: Nurse Ana Maria, they asked us to do an inventory check. If you're
     not too busy, can you do a count of what we have on this list?

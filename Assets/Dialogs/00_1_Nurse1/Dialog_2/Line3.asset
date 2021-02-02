@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line3
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+  dialogSound: {fileID: 8300000, guid: b9fb53e19c372d149a992fd65177f428, type: 3}
   dialogSubtitles: I have another task for you, nurse. A recent entry has been given
     for an isolated patient, young boy, Corporal Carlos Sampaio.

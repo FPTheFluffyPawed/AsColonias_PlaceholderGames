@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Dialog_3
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 11400000, guid: 4ad08627b1806904f85ef1d9b9764f57, type: 2}
-  - {fileID: 11400000, guid: 37959edf37d40a34da7831f6c6878826, type: 2}
-  - {fileID: 11400000, guid: 4f5d97b3ea5c71f49990a9a36b06614d, type: 2}
-  - {fileID: 11400000, guid: a608a0ad063ec594ba656a667a42fc2a, type: 2}
-  - {fileID: 11400000, guid: 72d42e784e79e004e9a554eb009b6973, type: 2}
+  - {fileID: 11400000, guid: 57b7ec6769e2ba8499140f6467dd0764, type: 2}
+  - {fileID: 11400000, guid: 884bce3322fad1f4cb36e7d519184381, type: 2}
+  - {fileID: 11400000, guid: 5813bd13f99a4cd408c8ab1b58dc2200, type: 2}
+  - {fileID: 11400000, guid: 22641b6d7853ff743b2592b188b527bf, type: 2}
+  - {fileID: 11400000, guid: 7deb1d22825f8974281a25d8b371a4b9, type: 2}

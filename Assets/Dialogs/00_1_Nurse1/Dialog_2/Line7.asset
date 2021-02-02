@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Line7
   m_EditorClassIdentifier: 
   dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
-  dialogSubtitles: I have another task for you, nurse. A recent entry has been given
-    for an isolated patient, young boy, Corporal Carlos Sampaio.
+  dialogSubtitles: <color=yellow>Of course, Doctor.</color>
