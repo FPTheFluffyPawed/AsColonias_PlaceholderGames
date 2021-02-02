@@ -158,8 +158,9 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Examine()
     {
-        // Play the animation if it has one.
-        _currentInteractive.Interact();
+        // Play the animation if it has one, as well if you have the requirements.
+        if(_hasRequirements)
+            _currentInteractive.PlayAnimation();
 
         // Check if we can only examine it once.
         if (_currentInteractive.type == Interactive.InteractType.Examine_Once)
@@ -212,8 +213,6 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool CanInteractAgain()
     {
-        //Debug.Log(interactionCooldown);
-
         interactionCooldown -= Time.deltaTime;
 
         if (interactionCooldown < 0) interactionCooldown = 0;

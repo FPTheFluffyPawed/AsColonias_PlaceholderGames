@@ -73,6 +73,12 @@ public class Interactive : MonoBehaviour
             GetComponent<Collider>().enabled = false;
     }
 
+    public void PlayAnimation()
+    {
+        if (_animator != null)
+            _animator.SetTrigger("Interact");
+    }
+
     public void EnableDisableGOs()
     {
         if (gameObjects.Length != 0)
