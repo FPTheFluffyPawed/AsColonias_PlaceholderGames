@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
-  dialogSubtitles: "Quando acabar, entregue-me a lista de volta o mais rapidamente
-    poss\xEDvel, por favor."
+  dialogSubtitles: When you're done, bring me the list as soon as possible, please.

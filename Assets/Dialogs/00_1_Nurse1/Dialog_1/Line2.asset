@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
-  dialogSubtitles: "Claro que sim Doutor, vou j\xE1 tratar disso."
+  dialogSubtitles: <color=yellow>Of course Doctor, I'll take care of it.</color>

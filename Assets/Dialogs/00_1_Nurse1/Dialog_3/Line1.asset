@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
-  dialogSubtitles: Nurse Ana Maria, they asked us to do an inventory check. If you're
-    not too busy, can you do a count of what we have on this list?
+  dialogSubtitles: <color=yellow>Corporal Sampaio? Excuse me, I'm here to see how
+    you're doing. How do you feel?</color>
