@@ -5,11 +5,20 @@ using UnityEngine;
 public class TruckEvent : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject truckCamera;
+    [SerializeField] private GameObject inOfTruckPosition;
+    [SerializeField] private GameObject outOfTruckPosition;
 
-    public void TransferPlayer()
+    private void TransferPlayerToTruck()
     {
-        player.SetActive(false);
-        truckCamera.SetActive(true);
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.transform.position = inOfTruckPosition.transform.position;
+        player.transform.SetParent(inOfTruckPosition.transform);
+    }
+
+    private void TransferPlayerOutOfTruck()
+    {
+        player.transform.position = outOfTruckPosition.transform.position;
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.transform.parent = null;
     }
 }
