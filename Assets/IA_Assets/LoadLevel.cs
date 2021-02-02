@@ -17,7 +17,7 @@ public class LoadLevel : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
 
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(1);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(2);
         asyncOperation.allowSceneActivation = false;
 
         while(!asyncOperation.isDone)
