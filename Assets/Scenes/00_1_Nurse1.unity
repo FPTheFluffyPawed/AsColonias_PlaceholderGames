@@ -703,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b36ac5aabd23b2f499eb0a6dacb47ad0, type: 3}
+      objectReference: {fileID: 8300000, guid: 1537f6ec13fdf8140badeea45ff9bf76, type: 3}
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: subtitles
       value: 
@@ -1004,7 +1004,7 @@ PrefabInstance:
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f718e300f6e5a0d489c2091372836b37, type: 3}
+      objectReference: {fileID: 8300000, guid: 274f5ff42611c5b49bd9115abf0c6741, type: 3}
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: subtitles
       value: 
@@ -2683,7 +2683,7 @@ PrefabInstance:
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7340c4e77524edf4dbe30c60a86f0141, type: 3}
+      objectReference: {fileID: 8300000, guid: 98cfa3fdced6cc04c94ec36efbee0c89, type: 3}
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: subtitles
       value: 
@@ -3720,7 +3720,7 @@ PrefabInstance:
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 934d0d6a1f47c7c45bccf6a68de89f1c, type: 3}
+      objectReference: {fileID: 8300000, guid: ab5414880b71ee944aedc6315b2903ab, type: 3}
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: subtitles
       value: 

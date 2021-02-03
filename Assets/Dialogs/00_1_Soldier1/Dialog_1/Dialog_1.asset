@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Dialog_1
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 11400000, guid: 447b5e9f4c6d4624c894042c941e7d07, type: 2}
-  - {fileID: 11400000, guid: a52f872a97c1dc94e8d315d6041eba5d, type: 2}
-  - {fileID: 11400000, guid: 3cca7df7e0be34f44a30324ceb3879c3, type: 2}
+  - {fileID: 11400000, guid: 8b112a9942e74164d8d9ca32d3f5e575, type: 2}
+  - {fileID: 11400000, guid: 1d596ef1ef1c99f4f99f582adb01d1de, type: 2}

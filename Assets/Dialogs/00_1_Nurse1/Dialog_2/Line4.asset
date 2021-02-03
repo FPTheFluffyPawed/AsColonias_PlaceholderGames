@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line4
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: bbe4773df3c81f8498af419e87e8b76a, type: 3}
+  dialogSound: {fileID: 8300000, guid: 96c3bdd7c292ad5478fd66f9c5b82668, type: 3}
   dialogSubtitles: Looks to have been victim of an ambush, him and 7 more members
     of his squad. Was unconscious for a day before being transferred here.

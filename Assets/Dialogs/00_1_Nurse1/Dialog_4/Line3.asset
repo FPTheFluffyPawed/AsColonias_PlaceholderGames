@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line3
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: 61dd7c0429156bc4caee88794b69332b, type: 3}
+  dialogSound: {fileID: 8300000, guid: 303350cadfaaf6946bddff287c1f2653, type: 3}
   dialogSubtitles: <color=yellow> De Penacova, ah? When I was a child I'd go a lot
     of times to Mealhada with my parents, and we always went to Penacova to fill
     pitches on the waterfall. My dad said that water did good, that it was magical...

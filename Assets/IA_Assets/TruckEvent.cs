@@ -17,8 +17,8 @@ public class TruckEvent : MonoBehaviour
 
     private void TransferPlayerOutOfTruck()
     {
+        player.transform.parent = null;
         player.transform.position = outOfTruckPosition.transform.position;
         player.GetComponent<PlayerMovement>().enabled = true;
-        player.transform.parent = null;
     }
 }

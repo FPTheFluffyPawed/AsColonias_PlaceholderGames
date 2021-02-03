@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line6
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: 809da08d527036f4892d7748c2219037, type: 3}
+  dialogSound: {fileID: 8300000, guid: 5129ef19c1ebfff4e838eb10f722205d, type: 3}
   dialogSubtitles: Please, check how he's doing. I'll pass by later to do a detailed
     diagnostic, but I need to take care of these urgent cases.

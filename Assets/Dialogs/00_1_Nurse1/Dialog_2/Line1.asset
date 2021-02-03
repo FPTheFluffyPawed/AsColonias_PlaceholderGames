@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line1
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: e648236ef97b4c849bedbe0b5043de3b, type: 3}
+  dialogSound: {fileID: 8300000, guid: b8dfcca500a390f438a5abb471699b80, type: 3}
   dialogSubtitles: <color=yellow>Here you go, Doctor. We have reasonable quantities
     of almost everything, but starting to have little pills for malaria.</color>

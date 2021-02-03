@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line5
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: 16342032f3bebb84793c1d1e99ac904a, type: 3}
+  dialogSound: {fileID: 8300000, guid: a2e7ed55af9e31046ac0f983a02fcc5e, type: 3}
   dialogSubtitles: When he arrived, they told us he barely spoke, didn't tell us
     anything of what happened. Based on what we know, he was hit on the head, but
     doesn't seem anything serious.

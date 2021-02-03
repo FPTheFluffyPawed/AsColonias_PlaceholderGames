@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line2
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: 61f2e53aa2a7aa541b74dbdb6859e65c, type: 3}
+  dialogSound: {fileID: 8300000, guid: 130f5854ae0696941b88c456c2f9aa0f, type: 3}
   dialogSubtitles: <color=yellow>Of course Doctor, I'll take care of it.</color>
