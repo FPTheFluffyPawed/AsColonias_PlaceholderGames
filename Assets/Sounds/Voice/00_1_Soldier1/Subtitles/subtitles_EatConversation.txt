@@ -1,18 +1,18 @@
 1
 00:00:00 --> 00:00:02,800
-<color=green>So Ferreira, did you hear that Benfica won?</color>
+So Ferreira, did you hear that Benfica won?
 
 2
 00:00:03 --> 00:00:05,500
-<color=red>It's true! That Eusebio is amazing!</color>
+It's true! That Eusebio is amazing!
 
 3
 00:00:06 --> 00:00:07,800
-<color=brown>The tri-champion is already singing!</color>
+The tri-champion is already singing!
 
 4
 00:00:08 --> 00:00:10,700
-<color=green>Well, let's get this over with. Everybody in the truck!</color>
+Well, let's get this over with. Everybody in the truck!
 
 5
 00:00:10,800 --> 00:00:11,500

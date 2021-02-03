@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogSound: {fileID: 8300000, guid: 26f53b3402eae6e4b8a0660f3c41d252, type: 3}
   dialogSubtitles: <color=yellow>So... Where are you from, sir? Which zone of Portugal,
-    I mean. You don't seem to be from the Ultramarinas...</color>
+    I mean. You don't seem to be from the colonies...</color>

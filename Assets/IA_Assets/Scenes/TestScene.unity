@@ -301,9 +301,12 @@ MonoBehaviour:
   subtitles: {fileID: 0}
   dialog: {fileID: 0}
   sprite: {fileID: 21300000, guid: 425d7eecb9463694b83500059bd6ce7b, type: 3}
+  gameObjects: []
   inventoryRequirements: []
-  type: 2
+  newObjectiveText: 
+  talkGiveItem: {fileID: 0}
   _animator: {fileID: 0}
+  type: 2
 --- !u!1 &241821974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1466712990016599787, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1466712990016599799, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
       propertyPath: m_RootOrder
@@ -1079,6 +1082,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1466712990016599799, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743361812327120757, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518076817194942746, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485446132915387048, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
+      propertyPath: m_text
+      value: 'Dear parents,
+
+
+        How are things back at home?
+
+        I''m
+        sorry for not writing to you earlier.
+
+        I have something to tell you,
+        but don''t be
+
+        alarmed. I was involved in combat and I was
+
+        injured.
+        I''m fine but I don''t know
+
+        how my partners are.
+
+
+        This
+        is what happened...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485446132915387048, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6245364073017792621, guid: ad7503f540c88394ab1cc88ae7468732, type: 2}
+    - target: {fileID: 5485446132915387048, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278994478
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485446132915387048, guid: c92576b72ec7e5040b287991048dde1e, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
