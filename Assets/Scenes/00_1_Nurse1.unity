@@ -703,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+      objectReference: {fileID: 8300000, guid: b36ac5aabd23b2f499eb0a6dacb47ad0, type: 3}
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: subtitles
       value: 
@@ -1004,7 +1004,7 @@ PrefabInstance:
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+      objectReference: {fileID: 8300000, guid: f718e300f6e5a0d489c2091372836b37, type: 3}
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: subtitles
       value: 
@@ -1447,6 +1447,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7343264804255502481, guid: d66e2ffffadb5f743a801901370c4405, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7343264804255502485, guid: d66e2ffffadb5f743a801901370c4405, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2679,7 +2683,7 @@ PrefabInstance:
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+      objectReference: {fileID: 8300000, guid: 7340c4e77524edf4dbe30c60a86f0141, type: 3}
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: subtitles
       value: 
@@ -3716,7 +3720,7 @@ PrefabInstance:
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+      objectReference: {fileID: 8300000, guid: 934d0d6a1f47c7c45bccf6a68de89f1c, type: 3}
     - target: {fileID: 6040595253396318100, guid: 19a12d5a6d86f3a4fb87316090fab22d, type: 3}
       propertyPath: subtitles
       value: 
