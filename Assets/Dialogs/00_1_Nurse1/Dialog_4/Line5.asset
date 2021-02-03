@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line5
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+  dialogSound: {fileID: 8300000, guid: a948e59a6d36ea748a37c591e6c4149c, type: 3}
   dialogSubtitles: <color=yellow>Oh, don't worry, you're a strong kid, this is nothing.
     You'll see that you'll recover in an instant.</color>

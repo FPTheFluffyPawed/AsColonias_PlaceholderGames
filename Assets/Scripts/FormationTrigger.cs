@@ -9,11 +9,13 @@ public class FormationTrigger : MonoBehaviour
     [SerializeField] private SubtitleDisplayer playerSubtitles;
     [SerializeField] private TextAsset newSubtitles;
     [SerializeField] private GameObject[] enableDisableGameObjects;
+    [SerializeField] private string newObjective;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "Player")
         {
+            other.gameObject.GetComponentInChildren<PlayerInterface>().UpdateObjectiveText(newObjective);
             soldier.Play();
             playerSubtitles.Subtitle = newSubtitles;
             StartCoroutine(WaitForOtherCoroutine());

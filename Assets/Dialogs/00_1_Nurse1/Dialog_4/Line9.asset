@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line9
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+  dialogSound: {fileID: 8300000, guid: 07de8aa32e81030489d94c0037270a15, type: 3}
   dialogSubtitles: <color=yellow>You're right, it'll do a lot of good. Tell me, what
     is it that you want me to write?</color>

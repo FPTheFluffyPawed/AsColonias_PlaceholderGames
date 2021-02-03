@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
   m_Name: Line4
   m_EditorClassIdentifier: 
-  dialogSound: {fileID: 8300000, guid: d1993afb98d6a044d88536103cf99434, type: 3}
+  dialogSound: {fileID: 8300000, guid: f650296adc8d2bc4d80cdb8003527474, type: 3}
   dialogSubtitles: Magical don't know, but I spent my life drinking from it and I
     always had good health. Well, until now, it seems.

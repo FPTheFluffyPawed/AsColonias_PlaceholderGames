@@ -24,6 +24,7 @@ public class EatConversation : MonoBehaviour
 
     private void TransitionOutOfConversation()
     {
+        Debug.Log("Conversation ended");
         player.GetComponent<PlayerMovement>().enabled = true;
 
         for(int i = 0; i < enableDisableGameObjects.Length; i++)

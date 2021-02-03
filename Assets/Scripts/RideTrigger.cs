@@ -9,7 +9,7 @@ public class RideTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "GAZ-66")
+        if(other.gameObject.name == "TruckSampaio")
         {
             soldier.clip = clip;
             soldier.Play();

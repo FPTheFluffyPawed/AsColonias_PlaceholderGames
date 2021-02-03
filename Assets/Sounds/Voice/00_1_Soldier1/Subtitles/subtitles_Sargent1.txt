@@ -1,7 +1,3 @@
 1
-00:00:00 --> 00:00:11
+00:00:00 --> 00:00:17
 STAND UP! Good morning, gentlemen. As you know, your perform today will be the usual morning patrol. Beyond that, you must take a box of medicine to the village. Understood?
-
-2
-00:00:11 --> 00:00:17
-At ease, go get your meals before departing.
