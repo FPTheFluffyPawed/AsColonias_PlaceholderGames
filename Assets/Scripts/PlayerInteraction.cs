@@ -42,7 +42,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (_currentInteractive != null)
         {
-            _currentInteractive.Highlight();
+            //_currentInteractive.Highlight();
 
             if(CanInteractAgain())
                 _ui.SetInteractionText(_currentInteractive.interactiveText);
@@ -86,7 +86,7 @@ public class PlayerInteraction : MonoBehaviour
                     break;
                 case Interactive.InteractType.Talk:
                     if (Input.GetMouseButtonDown(0))
-                        Talk();
+                        NewTalk();
                     break;
                 case Interactive.InteractType.Examine:
                     if (Input.GetMouseButtonDown(0))
@@ -153,6 +153,14 @@ public class PlayerInteraction : MonoBehaviour
 
             interactionCooldown = 1.0f;
             _ui.ClearInteractionText();
+        }
+    }
+
+    private void NewTalk()
+    {
+        if (_hasRequirements)
+        {
+            _currentInteractive.Talk();
         }
     }
 
