@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class Conversation : MonoBehaviour
 {
-    [Header("Player")]
     [SerializeField] private GameObject player;
     private PlayerMovement pm;
     private PlayerInteraction pi;
 
-    [Header("Dialog Content")]
-    [Tooltip("")]
+    [Header("Conversation/Cutscene")]
+    [Tooltip("The animators of the actors, in case we wanna trigger their animations.")]
     [SerializeField] private Animator[] animators;
+
+    [Tooltip("Dialog SO to get the audio files from.")]
     [SerializeField] private Dialog dialog;
+
+    [Tooltip("Subtitles text file.")]
     [SerializeField] private TextAsset subtitles;
+
+    [Tooltip("Audio sources to be utilised in order to play audio from.")]
     [SerializeField] private AudioSource[] audioSources;
 
     private int counter;
