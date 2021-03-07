@@ -161,7 +161,7 @@ public class PlayerInteraction : MonoBehaviour
         if (_hasRequirements)
         {
             // Disable the GameObject.
-            _currentInteractive.gameObject.SetActive(false);
+            //_currentInteractive.gameObject.SetActive(false);
 
             // Trigger the talk.
             _currentInteractive.Talk();

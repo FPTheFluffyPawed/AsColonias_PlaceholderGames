@@ -21,6 +21,9 @@ public class Conversation : MonoBehaviour
     [Tooltip("Audio sources to be utilised in order to play audio from.")]
     [SerializeField] private AudioSource[] audioSources;
 
+    [Tooltip("Game Objects to enable or disable during the animation.")]
+    [SerializeField] private GameObject[] enableDisableGOs;
+
     private int counter;
 
     private void Start()
@@ -64,5 +67,19 @@ public class Conversation : MonoBehaviour
 
         // Increment the counter to advance the Dialog array.
         counter++;
+    }
+
+    private void EnableDisableGOs()
+    {
+        if (enableDisableGOs.Length != 0)
+        {
+            for (int i = 0; i < enableDisableGOs.Length; i++)
+            {
+                if (enableDisableGOs[i].activeSelf)
+                    enableDisableGOs[i].SetActive(false);
+                else
+                    enableDisableGOs[i].SetActive(true);
+            }
+        }
     }
 }
