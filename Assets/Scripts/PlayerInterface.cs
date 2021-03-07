@@ -37,8 +37,6 @@ public class PlayerInterface : MonoBehaviour
     {
         CleanInventorySlots();
 
-        Debug.Log(_pi.inventory.Count);
-
         for(int i = 0; i < _pi.inventory.Count; i++)
         {
             inventorySlots[i].sprite = _pi.inventory[i].sprite;
@@ -93,16 +91,16 @@ public class PlayerInterface : MonoBehaviour
             audioSource.Play();
 
             // Wait a bit.
-            yield return new WaitForSeconds(audioSource.clip.length + 1.0f);
+            yield return new WaitForSeconds(audioSource.clip.length + 0.5f);
 
             // Show that they can continue.
-            dialogContinueText.gameObject.SetActive(true);
+            //dialogContinueText.gameObject.SetActive(true);
 
             // Continue after key press.
-            yield return WaitForKeyPress(KeyCode.Mouse0);
+            //yield return WaitForKeyPress(KeyCode.Mouse0);
 
             // Hide the prompt again.
-            dialogContinueText.gameObject.SetActive(false);
+            //dialogContinueText.gameObject.SetActive(false);
         }
 
         dialogText.text = null;
@@ -144,7 +142,6 @@ public class PlayerInterface : MonoBehaviour
 
     private void DisablePlayer()
     {
-        Debug.Log("Disabled player");
         _pm.enabled = false;
         _pr.enabled = false;
         _pi.enabled = false;
@@ -152,7 +149,6 @@ public class PlayerInterface : MonoBehaviour
 
     private void EnablePlayer()
     {
-        Debug.Log("Enabled player");
         _pm.enabled = true;
         _pr.enabled = true;
         _pi.enabled = true;

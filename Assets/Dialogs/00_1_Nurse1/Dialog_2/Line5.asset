@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
+  m_Name: Line5
+  m_EditorClassIdentifier: 
+  dialogSound: {fileID: 8300000, guid: a2e7ed55af9e31046ac0f983a02fcc5e, type: 3}
+  dialogSubtitles: When he arrived, they told us he barely spoke, didn't tell us
+    anything of what happened. Based on what we know, he was hit on the head, but
+    doesn't seem anything serious.

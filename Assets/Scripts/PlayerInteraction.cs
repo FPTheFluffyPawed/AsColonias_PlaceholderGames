@@ -42,7 +42,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (_currentInteractive != null)
         {
-            _currentInteractive.Highlight();
+            //_currentInteractive.Highlight();
 
             if(CanInteractAgain())
                 _ui.SetInteractionText(_currentInteractive.interactiveText);
@@ -86,7 +86,7 @@ public class PlayerInteraction : MonoBehaviour
                     break;
                 case Interactive.InteractType.Talk:
                     if (Input.GetMouseButtonDown(0))
-                        Talk();
+                        NewTalk();
                     break;
                 case Interactive.InteractType.Examine:
                     if (Input.GetMouseButtonDown(0))
@@ -156,10 +156,23 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
+    private void NewTalk()
+    {
+        if (_hasRequirements)
+        {
+            // Disable the GameObject.
+            _currentInteractive.gameObject.SetActive(false);
+
+            // Trigger the talk.
+            _currentInteractive.Talk();
+        }
+    }
+
     private void Examine()
     {
-        // Play the animation if it has one.
-        _currentInteractive.Interact();
+        // Play the animation if it has one, as well if you have the requirements.
+        if(_hasRequirements)
+            _currentInteractive.PlayAnimation();
 
         // Check if we can only examine it once.
         if (_currentInteractive.type == Interactive.InteractType.Examine_Once)
@@ -212,8 +225,6 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool CanInteractAgain()
     {
-        //Debug.Log(interactionCooldown);
-
         interactionCooldown -= Time.deltaTime;
 
         if (interactionCooldown < 0) interactionCooldown = 0;

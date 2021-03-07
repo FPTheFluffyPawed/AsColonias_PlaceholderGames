@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
+  m_Name: Line7
+  m_EditorClassIdentifier: 
+  dialogSound: {fileID: 8300000, guid: 72ddf50ba4b70934eba993f64c28ec3d, type: 3}
+  dialogSubtitles: <color=yellow>Of course, feel free.</color>

@@ -24,6 +24,7 @@ public class Interactive : MonoBehaviour
     public Interactive talkGiveItem;
     [Tooltip("The animator attached, if you want an animation to play.")]
     [SerializeField] private Animator _animator;
+
     public enum InteractType { Examine, Talk, Pickup, Interact, Lock, Examine_Once };
 
     public InteractType type;
@@ -54,12 +55,9 @@ public class Interactive : MonoBehaviour
             m.SetColor("_EmissionColor", notHighlighted);
     }
 
-    public void Highlight()
+    public void Talk()
     {
-        timer = 0.1f;
-
-        if(m != null)
-            m.SetColor("_EmissionColor", highlighted);
+        _animator.SetTrigger("Talk");
     }
 
     public void Interact()
@@ -71,6 +69,12 @@ public class Interactive : MonoBehaviour
 
         if (type == InteractType.Lock)
             GetComponent<Collider>().enabled = false;
+    }
+
+    public void PlayAnimation()
+    {
+        if (_animator != null)
+            _animator.SetTrigger("Interact");
     }
 
     public void EnableDisableGOs()

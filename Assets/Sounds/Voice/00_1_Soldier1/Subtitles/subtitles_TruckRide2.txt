@@ -1,0 +1,31 @@
+1
+00:00:04,800 --> 00:00:09,600
+How did that end up there? No trees around here are big enough to fall down like it's nothing...
+
+2
+00:00:09,800 --> 00:00:13,800
+Don't know, could have fallen off a truck, somebody might have been transporting wood...
+
+3
+00:00:14,500 --> 00:00:21,800
+Don't think so... Smells like a trap to me. Keep those eyes open and ears attentive.
+
+4
+00:00:26 --> 00:00:28
+<color=red>[Gunshots!]</color>
+
+5
+00:00:28 --> 00:00:29
+Are those gunshots!?
+
+6
+00:00:29 --> 00:00:30
+It's an ambush!
+
+7
+00:00:30 --> 00:00:31
+<color=yellow>Careful!</color>
+
+8
+00:00:31 --> 00:00:32
+Grab your guns and get out!

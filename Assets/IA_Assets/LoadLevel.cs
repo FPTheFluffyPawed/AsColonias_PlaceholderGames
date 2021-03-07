@@ -7,6 +7,7 @@ using TMPro;
 public class LoadLevel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _continueText;
+    [SerializeField] private TextMeshProUGUI _narrationText;
 
     private void OnEnable()
     {
@@ -17,7 +18,7 @@ public class LoadLevel : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
 
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(1);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(2);
         asyncOperation.allowSceneActivation = false;
 
         while(!asyncOperation.isDone)
@@ -26,6 +27,7 @@ public class LoadLevel : MonoBehaviour
             {
                 Debug.Log("Finished loading");
 
+                _narrationText.gameObject.SetActive(true);
                 _continueText.gameObject.SetActive(true);
 
                 if (Input.GetKeyDown(KeyCode.Space))

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13fbc685f562fb64d82220702bf87e00, type: 3}
+  m_Name: Line4
+  m_EditorClassIdentifier: 
+  dialogSound: {fileID: 8300000, guid: 96c3bdd7c292ad5478fd66f9c5b82668, type: 3}
+  dialogSubtitles: Looks to have been victim of an ambush, him and 7 more members
+    of his squad. Was unconscious for a day before being transferred here.
