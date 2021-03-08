@@ -1,11 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Interactive : MonoBehaviour
 {
+    public enum InteractType { Examine, Talk, Pickup, Interact, Lock, Examine_Once };
+
+    [Header("Mandatory")]
+    [Tooltip("The type of Interactive.")]
+    public InteractType type;
     [Tooltip("This is what will appear when the Player hovers over it.")]
     public string interactiveText;
+
+    [Header("Non-Talk Properties")]
     [Tooltip("The audio file to play when the object is examined.")]
     public AudioClip audioClip;
     [Tooltip("The subtitles that are part of this audio file.")]
@@ -25,39 +33,29 @@ public class Interactive : MonoBehaviour
     [Tooltip("The animator attached, if you want an animation to play.")]
     [SerializeField] private Animator _animator;
 
-    public enum InteractType { Examine, Talk, Pickup, Interact, Lock, Examine_Once };
+    [Header("Talk / Conversations Only")]
+    [SerializeField] private PlayableDirector _director;
 
-    public InteractType type;
-
-    private float timer;
-    private Color highlighted, notHighlighted;
-    private Material m;
-    
-
+    private Interactive _interactive;
 
     private void Start()
     {
-        timer = 0f;
-        highlighted = new Color(0.2f, 0.2f, 0.2f);
-        notHighlighted = new Color(0, 0, 0);
-
-        if(GetComponent<Renderer>() != null)
-            m = GetComponent<Renderer>().material;
+        _interactive = GetComponent<Interactive>();
 
         if(_animator == null)
             _animator = GetComponent<Animator>();
-    }
 
-    private void FixedUpdate()
-    {
-        timer -= Time.deltaTime;
-        if (timer < 0 && m != null)
-            m.SetColor("_EmissionColor", notHighlighted);
+        if (_director == null)
+            _director = GetComponent<PlayableDirector>();
     }
 
     public void Talk()
     {
-        _animator.SetTrigger("Talk");
+        // Disable the collider for interactions, since we don't need it anymore.
+        // Destroy(gameObject.GetComponent<Collider>());
+
+        // Play the sequence.
+        _director.Play();
     }
 
     public void Interact()

@@ -7,38 +7,31 @@ public class Conversation : MonoBehaviour
     [SerializeField] private GameObject player;
     private PlayerMovement pm;
     private PlayerInteraction pi;
+    private PlayerInterface pui;
 
-    [Header("Conversation/Cutscene")]
-    [Tooltip("The animators of the actors, in case we wanna trigger their animations.")]
-    [SerializeField] private Animator[] animators;
-
-    [Tooltip("Dialog SO to get the audio files from.")]
-    [SerializeField] private Dialog dialog;
-
-    [Tooltip("Subtitles text file.")]
+    [Header("Conversation / Cutscene")]
+    [Tooltip("Subtitles text file for this Sequence.")]
     [SerializeField] private TextAsset subtitles;
-
-    [Tooltip("Audio sources to be utilised in order to play audio from.")]
-    [SerializeField] private AudioSource[] audioSources;
 
     [Tooltip("Game Objects to enable or disable during the animation.")]
     [SerializeField] private GameObject[] enableDisableGOs;
 
-    private int counter;
+    [Tooltip("The next Sequence / Interact to enable after this one is over.")]
+    [SerializeField] private GameObject nextSequence;
 
     private void Start()
     {
-        counter = 0;
         pm = player.GetComponent<PlayerMovement>();
         pi = player.GetComponent<PlayerInteraction>();
+        pui = player.GetComponentInChildren<PlayerInterface>();
     }
 
-    private void EngageSubtitles()
+    public void EngageSubtitles()
     {
-
+        pui.DisplaySubtitles(subtitles);
     }
 
-    private void GivePlayerItem()
+    public void GivePlayerItem()
     {
 
     }
@@ -55,21 +48,22 @@ public class Conversation : MonoBehaviour
         pi.enabled = true;
     }
 
-    private void TriggerOtherAnimation(int actor)
+    public void EnableDisablePlayerInteraction()
     {
-        animators[actor].SetTrigger("Sequence");
+        if (pi.enabled == true)
+            pi.enabled = false;
+        else
+            pi.enabled = true;
+
+        pui.ClearInteractionText();
     }
 
-    private void PlayVoiceLine(int actor)
+    public void EnableDisablePlayerMovement()
     {
-        audioSources[actor].clip = dialog.lines[counter].dialogSound;
-        audioSources[actor].Play();
 
-        // Increment the counter to advance the Dialog array.
-        counter++;
     }
 
-    private void EnableDisableGOs()
+    public void EnableDisableGOs()
     {
         if (enableDisableGOs.Length != 0)
         {
@@ -81,5 +75,14 @@ public class Conversation : MonoBehaviour
                     enableDisableGOs[i].SetActive(true);
             }
         }
+    }
+
+    public void SequenceEnd()
+    {
+        // Enable the next Sequence / Interact.
+        nextSequence.SetActive(true);
+
+        // Destroy this one.
+        Destroy(gameObject);
     }
 }
