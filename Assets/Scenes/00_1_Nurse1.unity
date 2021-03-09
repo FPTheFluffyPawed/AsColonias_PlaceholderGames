@@ -3350,6 +3350,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 48c4517649da34343a16fdadac5e32fd, type: 2}
     - {fileID: 11400000, guid: e553bf9e32b7c514997b9181217db3cc, type: 2}
     - {fileID: 11400000, guid: 6589ee2322d4bf9449c6e90161295c2a, type: 2}
+    - {fileID: 11400000, guid: d2c1271642fffb84095bc48adea6f24e, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -3398,6 +3399,20 @@ MonoBehaviour:
         - m_Target: {fileID: 1756739498}
           m_TargetAssemblyTypeName: Conversation, Assembly-CSharp
           m_MethodName: EnableDisablePlayerInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1756739498}
+          m_TargetAssemblyTypeName: Conversation, Assembly-CSharp
+          m_MethodName: GivePlayerItem
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3475,6 +3490,8 @@ MonoBehaviour:
   enableDisableGOs:
   - {fileID: 1057356119}
   nextSequence: {fileID: 1786865928}
+  itemsToGive:
+  - {fileID: 7080796224718376986, guid: a02ef65f8c994e444936dfcf0b8d2375, type: 3}
 --- !u!65 &1756739499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3653,6 +3670,7 @@ MonoBehaviour:
   - {fileID: 1057356119}
   - {fileID: 0}
   nextSequence: {fileID: 0}
+  itemsToGive: []
 --- !u!65 &1786865934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5657,13 +5675,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:LeftFoot'\n\tTransform 'mixamorig:LeftHandThumb2'\n\tTransform
-    'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:LeftHandPinky2'\n\tTransform
-    'mixamorig:RightHandRing2'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
-    'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0

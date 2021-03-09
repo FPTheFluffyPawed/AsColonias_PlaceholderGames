@@ -19,6 +19,8 @@ public class Conversation : MonoBehaviour
     [Tooltip("The next Sequence / Interact to enable after this one is over.")]
     [SerializeField] private GameObject nextSequence;
 
+    [Tooltip("Items to give to the player when the event is called.")]
+    [SerializeField] private Interactive[] itemsToGive;
     private void Start()
     {
         pm = player.GetComponent<PlayerMovement>();
@@ -33,7 +35,13 @@ public class Conversation : MonoBehaviour
 
     public void GivePlayerItem()
     {
-
+        if(itemsToGive.Length != 0)
+        {
+            for(int i = 0; i < itemsToGive.Length; i++)
+            {
+                pi.inventory.Add(itemsToGive[i]);
+            }
+        }
     }
 
     private void DisablePlayer()
