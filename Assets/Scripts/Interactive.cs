@@ -36,12 +36,8 @@ public class Interactive : MonoBehaviour
     [Header("Talk / Conversations Only")]
     [SerializeField] private PlayableDirector _director;
 
-    private Interactive _interactive;
-
     private void Start()
     {
-        _interactive = GetComponent<Interactive>();
-
         if(_animator == null)
             _animator = GetComponent<Animator>();
 
@@ -51,9 +47,6 @@ public class Interactive : MonoBehaviour
 
     public void Talk()
     {
-        // Disable the collider for interactions, since we don't need it anymore.
-        // Destroy(gameObject.GetComponent<Collider>());
-
         // Play the sequence.
         _director.Play();
     }

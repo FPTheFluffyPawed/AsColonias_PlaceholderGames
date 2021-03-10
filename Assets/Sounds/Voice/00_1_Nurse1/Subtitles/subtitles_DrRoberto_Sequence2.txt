@@ -1,0 +1,47 @@
+1
+00:00:00--> 00:00:01,550
+<color=yellow>Here you go, Doctor.</color>
+
+2
+00:00:02 --> 00:00:06,350
+<color=yellow>We have reasonable quantities of almost everything, but we're starting to need medicine for malaria.</color>
+
+3
+00:00:07,500 --> 00:00:09,300
+Many thanks. I'll request what's missing.
+
+4
+00:00:09,350 --> 00:00:11,300
+I have another task for you, Nurse.
+
+5
+00:00:11,350 --> 00:00:15,050
+We have a new isolated patient, a newbie, Corporate Carlos Sampaio.
+
+6
+00:00:15,150 --> 00:00:18,300
+Looks like he was a victim of an ambush, him and seven other members of the squad.
+
+7
+00:00:18,400 --> 00:00:20,550
+He was unconscious for a day before being transfered here.
+
+8
+00:00:21,100 --> 00:00:24,500
+When he arrived, they told us he said almost nothing, didn't say anything about what happened.
+
+9
+00:00:25,100 --> 00:00:28,050
+For what we know, he took a hit to the head, but doesn't seem too serious.
+
+10
+00:00:28,200 --> 00:00:32,300
+Please, check how he's doing. I'll go there soon to do a proper diagnostics,
+
+11
+00:00:32,350 --> 00:00:34,300
+but I have to take care of more serious cases.
+
+12
+00:00:35,100 --> 00:00:36,500
+<color=yellow>Of course, Doctor.</color>

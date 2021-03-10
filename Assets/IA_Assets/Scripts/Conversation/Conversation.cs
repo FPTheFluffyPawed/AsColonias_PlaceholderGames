@@ -16,11 +16,15 @@ public class Conversation : MonoBehaviour
     [Tooltip("Game Objects to enable or disable during the animation.")]
     [SerializeField] private GameObject[] enableDisableGOs;
 
+    [Tooltip("Items to give to the player when the event is called.")]
+    [SerializeField] private Interactive[] itemsToGive;
+
     [Tooltip("The next Sequence / Interact to enable after this one is over.")]
     [SerializeField] private GameObject nextSequence;
 
-    [Tooltip("Items to give to the player when the event is called.")]
-    [SerializeField] private Interactive[] itemsToGive;
+    [Tooltip("New objective to give to the player, if needed.")]
+    [SerializeField] private string newObjectiveText;
+
     private void Start()
     {
         pm = player.GetComponent<PlayerMovement>();
@@ -44,18 +48,6 @@ public class Conversation : MonoBehaviour
         }
     }
 
-    private void DisablePlayer()
-    {
-        pm.enabled = false;
-        pi.enabled = false;
-    }
-
-    private void EnablePlayer()
-    {
-        pm.enabled = true;
-        pi.enabled = true;
-    }
-
     public void EnableDisablePlayerInteraction()
     {
         if (pi.enabled == true)
@@ -68,7 +60,10 @@ public class Conversation : MonoBehaviour
 
     public void EnableDisablePlayerMovement()
     {
-
+        if (pm.enabled == true)
+            pm.enabled = false;
+        else
+            pm.enabled = true;
     }
 
     public void EnableDisableGOs()
@@ -88,7 +83,12 @@ public class Conversation : MonoBehaviour
     public void SequenceEnd()
     {
         // Enable the next Sequence / Interact.
-        nextSequence.SetActive(true);
+        if(nextSequence != null)
+            nextSequence.SetActive(true);
+
+        // Update the Objective text.
+        if (newObjectiveText != null)
+            pui.UpdateObjectiveText(newObjectiveText);
 
         // Destroy this one.
         Destroy(gameObject);

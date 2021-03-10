@@ -1,0 +1,15 @@
+1
+00:00:00--> 00:00:04,300
+Nurse Ana Maria, they asked us to do an inventory check of our storage.
+
+2
+00:00:04,550 --> 00:00:08
+If you're not too busy, can you do a count of our inventory in this list?
+
+3
+00:00:08,120 --> 00:00:10,550
+<color=yellow>Of course Doctor, I'll take care of it now.</color>
+
+4
+00:00:11,150 --> 00:00:14,350
+When you're done, give me the list as soon as possible, please.

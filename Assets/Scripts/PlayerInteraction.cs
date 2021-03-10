@@ -160,6 +160,10 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (_hasRequirements)
         {
+            // Remove the item.
+            for (int i = 0; i < _currentInteractive.inventoryRequirements.Length; i++)
+                RemoveFromInventory(_currentInteractive.inventoryRequirements[i]);
+
             // Trigger the Sequence.
             _currentInteractive.Talk();
         }
