@@ -56,11 +56,13 @@ public class PlayerInterface : MonoBehaviour
     public void SetInteractionText(string interactionName)
     {
         popUpText.text = interactionName;
+        popUpText.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void ClearInteractionText()
     {
         popUpText.text = null;
+        popUpText.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void DisplaySubtitles(TextAsset subtitles)

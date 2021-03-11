@@ -1,0 +1,23 @@
+1
+00:00:00--> 00:00:04,500
+<color=yellow>Corporate Sampaio? Excuse me, I'm here to see how you're doing. How do you feel?</color>
+
+2
+00:00:05,200 --> 00:00:06,500
+Good...
+
+3
+00:00:06,550 --> 00:00:10,500
+<color=yellow>Does your head still hurt? Do you have blurry vision?</color>
+
+4
+00:00:11,050 --> 00:00:13,400
+No, I'm fine...
+
+5
+00:00:13,500 --> 00:00:16,300
+<color=yellow>Hmm... I'll have to change your bandage.</color>
+
+6
+00:00:16,400 --> 00:00:22
+<color=yellow>I'll go get some things that I need and I'll be back. If you need me, call me.</color>
